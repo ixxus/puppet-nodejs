@@ -97,6 +97,7 @@ class nodejs::params {
         $npm_package_name          = 'npm'
         $npm_path                  = '/usr/bin/npm'
         $repo_class                = '::nodejs::repo::nodesource'
+      }
       elsif ($::operatingsystem == 'Amazon') {
         $manage_package_repo       = true
         $nodejs_debug_package_name = 'nodejs-debuginfo'
