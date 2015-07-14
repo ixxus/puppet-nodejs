@@ -99,14 +99,14 @@ class nodejs::params {
         $repo_class                = '::nodejs::repo::nodesource'
       }
       elsif ($::operatingsystem == 'Amazon') {
-        $manage_package_repo       = true
+        $manage_package_repo       = false
         $nodejs_debug_package_name = 'nodejs-debuginfo'
         $nodejs_dev_package_name   = 'nodejs-devel'
         $nodejs_package_name       = 'nodejs'
-        $npm_package_ensure        = 'absent'
+        $npm_package_ensure        = 'present'
         $npm_package_name          = 'npm'
         $npm_path                  = '/usr/bin/npm'
-        $repo_class                = '::nodejs::repo::nodesource'
+        $repo_class                = undef
       }
       else {
         fail("The ${module_name} module is not supported on ${::operatingsystem} ${::operatingsystemrelease}.")
