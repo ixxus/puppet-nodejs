@@ -100,7 +100,7 @@ class nodejs::params {
       }
       elsif ($::operatingsystem == 'Amazon') {
         $manage_package_repo       = false
-        $nodejs_debug_package_name = 'nodejs-debuginfo'
+        $nodejs_debug_package_name = 'nodejs-debug'
         $nodejs_dev_package_name   = 'nodejs-devel'
         $nodejs_package_name       = 'nodejs'
         $npm_package_ensure        = 'present'
